@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - TravelEase</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+    }
+
+    /* NAVBAR */
+    .navbar {
+        background: linear-gradient(120deg, #89f7fe, #66a6ff);
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        position: sticky;
+    }
+
+    .logo {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .nav-links a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    /* HEADER BANNER */
+    .about-header {
+        padding: 80px 40px;
+        text-align: center;
+        background: linear-gradient(120deg, #89f7fe, #66a6ff);
+        color: white;
+    }
+
+    .about-header h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    .about-header p {
+        font-size: 18px;
+    }
+
+    /* SECTION GENERAL */
+    section {
+        padding: 60px 40px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 32px;
+        margin-bottom: 25px;
+        color: #333;
+    }
+
+    /* MISSION SECTION */
+    .mission {
+        max-width: 900px;
+        margin: auto;
+        font-size: 18px;
+        color: #555;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    /* STORY SECTION */
+    .story {
+        max-width: 950px;
+        margin: auto;
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .story img {
+        width: 100%;
+        max-width: 420px;
+        border-radius: 16px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .story-text {
+        flex: 1;
+        font-size: 18px;
+        color: #555;
+        line-height: 1.7;
+    }
+
+    /* WHY CHOOSE US */
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .feature-box {
+        background: white;
+        padding: 25px;
+        width: 280px;
+        border-radius: 14px;
+        text-align: center;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .feature-box h3 {
+        color: #4d8aeb;
+        margin-bottom: 10px;
+    }
+
+    .feature-box p {
+        color: #555;
+        font-size: 16px;
+    }
+
+    /* TEAM SECTION */
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .team-card {
+        background: white;
+        padding: 20px;
+        border-radius: 14px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .team-card img {
+        width: 100%;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .team-card h4 {
+        margin-bottom: 6px;
+        color: #333;
+    }
+
+    .team-card p {
+        color: #555;
+        font-size: 15px;
+    }
+
+    /* FOOTER */
+    .footer {
+        text-align: center;
+        padding: 25px;
+        margin-top: 40px;
+        background: #66a6ff;
+        color: white;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">TravelEase</div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<!-- HEADER -->
+<section class="about-header">
+    <h1>About Us</h1>
+    <p>Your trusted partner for unforgettable journeys.</p>
+</section>
+
+<!-- MISSION -->
+<section>
+    <h2>Our Mission</h2>
+    <p class="mission">
+        At TravelEase, our mission is to make travel simple, affordable, and memorable.
+        We are committed to offering personalized travel packages, top-class customer
+        service, and unforgettable experiences to every traveler.
+    </p>
+</section>
+
+<!-- STORY SECTION -->
+<section>
+    <h2>Our Story</h2>
+    <div class="story">
+        <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2" alt="Our office">
+        <div class="story-text">
+            <p>
+                TravelEase was founded with a passion for exploration and a vision to make
+                travel accessible to everyone. Over the years, we have helped thousands of 
+                travelers discover new destinations, cultures, and adventures.
+            </p>
+            <p>
+                With a dedicated team and a strong global network, we continue to innovate
+                and offer the best travel experiences across the world.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section>
+    <h2>Why Choose Us</h2>
+    <div class="features">
+        <div class="feature-box">
+            <h3>Best Price Guarantee</h3>
+            <p>We offer competitive pricing and exclusive deals you won't find elsewhere.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>24/7 Support</h3>
+            <p>Our travel experts are available round-the-clock to assist you.</p>
+        </div>
+
+        <div class="feature-box">
+            <h3>Trusted Service</h3>
+            <p>Thousands of happy customers trust TravelEase for hassle-free trips.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section>
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+
+        <div class="team-card">
+            <h4>Emma Wilson</h4>
+            <p>Founder & CEO</p>
+        </div>
+
+        <div class="team-card">
+            <h4>James Carter</h4>
+            <p>Travel Consultant</p>
+        </div>
+
+        <div class="team-card">
+            <h4>Sophia Brown</h4>
+            <p>Customer Support Lead</p>
+        </div>
+
+        <div class="team-card">
+            <h4>Oliver Smith</h4>
+            <p>Travel Planner</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 TravelEase. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

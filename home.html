@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency - Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* Make menu stack on small screens */
+        @media (max-width: 600px) {
+            .nav-links {display: none;}
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 60px;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            color: white;
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .hero-btn {
+            text-decoration: none;
+            background: white;
+            color: #4d8aeb;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: #f0f0f0;
+        }
+
+        /* Hero image (Right side) */
+
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 60px 30px;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-img {
+                width: 100%;
+                max-width: 400px;
+                margin-top: 25px;
+            }
+        }
+
+        /* HERO SLIDER */
+        .hero-slider {
+            width: 420px;
+            height: 280px;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: slideAnimation 12s infinite;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding-bottom: 20px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+            border-radius: 18px;
+        }
+
+        /* Individual slides */
+        .slide1 {
+            background-image: url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34');
+            animation-delay: 0s;
+        }
+
+        .slide2 {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+            animation-delay: 4s;
+        }
+
+        .slide3 {
+            background-image: url('https://plus.unsplash.com/premium_photo-1661954654458-c673671d4a08?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmV3JTIweW9yayUyMGNpdHl8ZW58MHx8MHx8fDA%3D');
+            animation-delay: 8s;
+        }
+
+        /* Keyframes for fading slides */
+        @keyframes slideAnimation {
+            0% {
+                opacity: 0;
+            }
+            8% {opacity: 1;}
+            30% {opacity: 1;}
+            38% {opacity: 0;}
+            100% {opacity: 0;}
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-slider {
+                width: 100%;
+                max-width: 400px;
+                margin-top: 25px;
+            }
+        }
+
+        /* SECTION HEADERS */
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* DESTINATIONS */
+        .destinations {
+            padding: 60px 40px;
+            background: #f5f7fa;
+        }
+
+        .dest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .dest-card {
+            height: 220px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .dest-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .dest-card h3 {
+            position: absolute;
+            bottom: 12px;
+            left: 15px;
+            color: white;
+            text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* PACKAGES */
+        .packages {
+            padding: 60px 40px;
+            background: white;
+        }
+
+        .pack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .pack-card {
+            padding: 20px;
+            background: #f8faff;
+            border-radius: 14px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .pack-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pack-card h3 {
+            margin-bottom: 10px;
+            color: #4d8aeb;
+        }
+
+        .price {
+            display: block;
+            margin: 10px 0 15px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .pack-btn {
+            text-decoration: none;
+            background: #4d8aeb;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .view-more-btn {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #4d8aeb;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: #66a6ff;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text, .section h2 {
+    animation: fadeInUp 1s ease forwards;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">TravelEase</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <!--hero section-->
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Explore The World With Us</h1>
+            <p>Your journey begins here. Discover new destinations, book amazing trips, and make unforgettable memories.
+            </p>
+            <a href="#packages" class="hero-btn">Book Now</a>
+        </div>
+
+        <div class="hero-slider">
+            <div class="slide slide1">
+                <h2 style="color: white;">Paris, France</h2>
+            </div>
+            <div class="slide slide2">
+                <h2 style="color: white;">Bali, Indonesia</h2>
+            </div>
+            <div class="slide slide3">
+                <h2 style="color: white;">New York, USA</h2>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- DESTINATIONS PREVIEW -->
+    <section class="destinations" id="destinations">
+        <h2>Popular Destinations</h2>
+
+        <div class="dest-grid">
+            <div class="dest-card"
+                style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34');">
+                <h3>Paris</h3>
+            </div>
+
+            <div class="dest-card"
+                style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+                <h3>Bali</h3>
+            </div>
+
+            <div class="dest-card"
+                style="background-image:url('https://images.unsplash.com/photo-1534447677768-be436bb09401');">
+                <h3>Tokyo</h3>
+            </div>
+        </div>
+
+        <a href="destinations.html" class="view-more-btn">View All Destinations</a>
+    </section>
+
+    <!-- PACKAGES PREVIEW -->
+    <section class="packages" id="packages">
+        <h2>Featured Packages</h2>
+
+        <div class="pack-grid">
+
+            <div class="pack-card">
+                <h3>Paris Tour</h3>
+                <p>5 Nights · Hotel + City Tour</p>
+                <span class="price">₹100000</span>
+                <a href="packages.html" class="pack-btn">View Details</a>
+            </div>
+
+            <div class="pack-card">
+                <h3>Bali Beach Escape</h3>
+                <p>6 Nights · Resort Stay</p>
+                <span class="price">₹50000</span>
+                <a href="packages.html" class="pack-btn">View Details</a>
+            </div>
+
+            <div class="pack-card">
+                <h3>New York Explorer</h3>
+                <p>4 Nights · City Pass</p>
+                <span class="price">₹150000</span>
+                <a href="packages.html" class="pack-btn">View Details</a>
+            </div>
+
+        </div>
+
+        <a href="packages.html" class="view-more-btn">View All Packages</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <p>© 2025 TravelEase. All rights reserved.</p>
+        <p>
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="privacy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>

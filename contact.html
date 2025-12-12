@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - TravelEase</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+    }
+
+    /* NAVBAR (same as home page) */
+    .navbar {
+        background: linear-gradient(120deg, #89f7fe, #66a6ff);
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        position: sticky;
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    .nav-links a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    /* HEADER */
+    .contact-header {
+        padding: 80px 40px;
+        text-align: center;
+        background: linear-gradient(120deg, #89f7fe, #66a6ff);
+        color: white;
+    }
+
+    .contact-header h1 {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+
+    .contact-header p {
+        font-size: 18px;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+        padding: 60px 40px;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    /* FORM */
+    .contact-form {
+        flex: 1;
+        min-width: 320px;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h2 {
+        margin-bottom: 20px;
+        color: #4d8aeb;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 95%;
+        padding: 14px;
+        margin: 10px;
+        border: 1px solid #d0d6e0;
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .contact-form textarea {
+        height: 140px;
+        resize: none;
+    }
+
+    .contact-btn {
+        background: #4d8aeb;
+        color: white;
+        padding: 14px 22px;
+        border: none;
+        border-radius: 8px;
+        font-size: 17px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .contact-btn:hover {
+        background: #3b75d7;
+    }
+
+    /* CONTACT INFO */
+    .contact-info {
+        flex: 1;
+        min-width: 300px;
+        background: #f8faff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+    .contact-info h2 {
+        color: #4d8aeb;
+    }
+
+    .info-item {
+        margin: 20px 0;
+        font-size: 17px;
+    }
+
+    .info-item strong {
+        color: #333;
+    }
+
+    /* FOOTER */
+    .footer {
+        text-align: center;
+        padding: 25px;
+        margin-top: 40px;
+        background: #66a6ff;
+        color: white;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+    }
+    .navbar {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">TravelEase</div>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="packages.html">Packages</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+    </div>
+</div>
+
+<!-- CONTACT HEADER -->
+<section class="contact-header">
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you. Reach out for any inquiries or assistance.</p>
+</section>
+
+<!-- CONTACT CONTENT -->
+<section class="contact-section">
+
+    <!-- Form -->
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form>
+            <input type="text" value="Your Name" required>
+            <input type="email" value="Email Address" required>
+            <input type="text" value="Subject" required>
+            <input type="text" value="Phone no." required>
+            <textarea placeholder="Write your message..."></textarea>
+            <button class="contact-btn">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Info -->
+    <div class="contact-info">
+        <h2>Our Contact Info</h2>
+
+        <div class="info-item">
+            <b>Email:</b> support@travelease.com
+        </div>
+
+        <div class="info-item">
+            <b>Phone:</b> 1234567890  
+        </div>
+
+        <div class="info-item">
+            <b>Address:</b><br>
+            TravelEase HQ, New Delhi, India
+        </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 TravelEase. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - TravelEase</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* ANIMATED BACKGROUND */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(137, 247, 254, 0.2);
+            border-radius: 50%;
+            animation: float 20s infinite alternate;
+        }
+
+        .bg-circle:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            background: rgba(102, 166, 255, 0.2);
+            top: 300px;
+            left: 200px;
+            animation-duration: 25s;
+        }
+
+        .bg-circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            background: rgba(137, 247, 254, 0.25);
+            top: 600px;
+            left: 800px;
+            animation-duration: 30s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            50% {
+                transform: translateY(-50px) translateX(30px);
+            }
+
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        /* HEADER */
+        .header-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            color: white;
+        }
+
+        .header-section h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header-section p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* DESTINATIONS GRID */
+        .section {
+            padding: 60px 40px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 50px;
+        }
+
+        .dest-card {
+            height: 220px;
+            border-radius: 16px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .dest-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .dest-card h3 {
+            position: absolute;
+            bottom: 12px;
+            left: 15px;
+            color: white;
+            text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+            font-size: 20px;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: #66a6ff;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background animation -->
+    <div class="bg-animation">
+        <div class="bg-circle" style="top:50px; left:100px;"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">TravelEase</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <section class="header-section">
+        <h1>Explore Popular Destinations</h1>
+        <p>TravelEase brings you the most amazing destinations across the globe. Discover, plan, and book your next adventure with ease.</p>
+    </section>
+
+    <!-- DESTINATIONS GRID -->
+    <section class="section">
+        <h2>Top Travel Spots</h2>
+
+        <div class="grid">
+            <div class="dest-card" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34');"><h3>Paris</h3></div>
+            <div class="dest-card" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');"><h3>Bali</h3></div>
+            <div class="dest-card" style="background-image:url('https://images.unsplash.com/photo-1534447677768-be436bb09401');"><h3>Tokyo</h3></div>
+            <div class="dest-card" style="background-image:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad');"><h3>New York</h3></div>
+            <div class="dest-card" style="background-image:url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c');"><h3>London</h3></div>
+            <div class="dest-card" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');"><h3>Dubai</h3></div>
+            <div class="dest-card" style="background-image:url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b');"><h3>Rome</h3></div>
+            <div class="dest-card" style="background-image:url('https://images.unsplash.com/photo-1600664356348-10686526af4f?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"><h3>Singapore</h3></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 TravelEase. All rights reserved.</p>
+        <p><a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+
+</html>

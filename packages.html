@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Packages - TravelEase</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        /* BACKGROUND ANIMATION */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(137, 247, 254, 0.2);
+            border-radius: 50%;
+            animation: float 20s infinite alternate;
+        }
+
+        .bg-circle:nth-child(2) {
+            width: 300px;
+            height: 300px;
+            background: rgba(102, 166, 255, 0.2);
+            top: 300px;
+            left: 200px;
+            animation-duration: 25s;
+        }
+
+        .bg-circle:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            background: rgba(137, 247, 254, 0.25);
+            top: 600px;
+            left: 800px;
+            animation-duration: 30s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            50% {
+                transform: translateY(-50px) translateX(30px);
+            }
+
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        /* HEADER */
+        .header-section {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            color: white;
+        }
+
+        .header-section h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header-section p {
+            font-size: 18px;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 60px 40px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        /* PACKAGE CARDS */
+        .pack-card {
+            background: #f8faff;
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .pack-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .pack-card h3 {
+            margin-bottom: 10px;
+            color: #4d8aeb;
+        }
+
+        .price {
+            display: block;
+            margin: 10px 0 15px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .pack-btn {
+            text-decoration: none;
+            background: #4d8aeb;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .pack-btn:hover {
+            background: #3573c3;
+        }
+
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            background: #66a6ff;
+            color: white;
+            margin-top: 40px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background animation -->
+    <div class="bg-animation">
+        <div class="bg-circle" style="top:50px; left:100px;"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">TravelEase</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <section class="header-section">
+        <h1>Our Travel Packages</h1>
+        <p>Explore packages for every type of traveler – from budget-friendly trips to luxurious escapes. Find your perfect journey below.</p>
+    </section>
+
+    <!-- AFFORDABLE PACKAGES -->
+    <section class="section">
+        <h2>Affordable Packages</h2>
+        <div class="grid">
+            <div class="pack-card">
+                <h3>Bali Beach Escape</h3>
+                <p>6 Nights · Resort Stay</p>
+                <span class="price">₹50,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+            <div class="pack-card">
+                <h3>Thailand Budget Trip</h3>
+                <p>5 Nights · Hotel + City Tour</p>
+                <span class="price">₹45,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LUXURIOUS PACKAGES -->
+    <section class="section">
+        <h2>Luxurious Packages</h2>
+        <div class="grid">
+            <div class="pack-card">
+                <h3>Paris City Tour</h3>
+                <p>5 Nights · Hotel + City Tour</p>
+                <span class="price">₹100,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+            <div class="pack-card">
+                <h3>Dubai Adventure</h3>
+                <p>4 Nights · Desert Safari + Hotel</p>
+                <span class="price">₹85,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ELITE PACKAGES -->
+    <section class="section">
+        <h2>Elite Packages</h2>
+        <div class="grid">
+            <div class="pack-card">
+                <h3>New York Explorer</h3>
+                <p>4 Nights · City Pass</p>
+                <span class="price">₹150,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+            <div class="pack-card">
+                <h3>Rome & Venice</h3>
+                <p>7 Nights · Historical Tour + Hotel</p>
+                <span class="price">₹140,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAMILY PACKAGES -->
+    <section class="section">
+        <h2>Family Packages</h2>
+        <div class="grid">
+            <div class="pack-card">
+                <h3>Singapore Explorer</h3>
+                <p>5 Nights · City Tour + Hotel</p>
+                <span class="price">₹95,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+            <div class="pack-card">
+                <h3>London Heritage Trip</h3>
+                <p>5 Nights · Historical Tour + Hotel</p>
+                <span class="price">₹90,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM PACKAGES -->
+    <section class="section">
+        <h2>Premium Packages</h2>
+        <div class="grid">
+            <div class="pack-card">
+                <h3>Tokyo Discovery</h3>
+                <p>6 Nights · City Tour + Hotel</p>
+                <span class="price">₹120,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+            <div class="pack-card">
+                <h3>Maldives Luxury Stay</h3>
+                <p>5 Nights · Overwater Villas</p>
+                <span class="price">₹200,000</span>
+                <a href="#" class="pack-btn">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2025 TravelEase. All rights reserved.</p>
+        <p><a href="about.html">About</a> | <a href="contact.html">Contact</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+
+</body>
+
+</html>
